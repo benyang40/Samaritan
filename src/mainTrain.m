@@ -7,7 +7,7 @@ clear ; close all; clc
 
 max_iter = 1000;
 
-data = load('training_data.txt');
+data = load('../training_data.txt');
 X = data(:, [1:7]); y = data(:, 11);
 
 fprintf(['Plotting data...\n']);
@@ -31,7 +31,7 @@ pause;
 %%%%% finding correct lambda  %%%%%%%%%%%%%%%%%%%%%
 
 % load validation data
-data_val = load('validation_data.txt');
+data_val = load('../validation_data.txt');
 X_val = data_val(:, [1:7]); y_val = data_val(:, 11);
 
 [lambda_vec, error_train, error_val] = ...
@@ -55,7 +55,7 @@ pause;
 %}
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
-data_test = load('test_data.txt');
+data_test = load('../test_data.txt');
 X_test = data_test(:, [1:7]); y_test = data_test(:, 11);
 
 %%%%%%%%%% train with lambda

@@ -2,11 +2,11 @@
 clear ; close all; clc
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
-data_real = load('realgame.txt');
+data_real = load('../realgame.txt');
 X_real = data_real(:, :);
 
 %%%%%%%%%% load theta from file
-load('theta.mat');
+load('../config/theta.mat');
 
 
 %%%%%%%%%% predict with Theta1 and Theta2
@@ -14,5 +14,5 @@ load('theta.mat');
 
 
 %%%%%%%%%% output
-output = 1 ./ h2;
-save('predictRealgameOutput.csv', 'output');
+output = 1 ./ h2
+save('../predictRealgameOutput.csv', 'output');

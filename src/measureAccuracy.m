@@ -2,7 +2,7 @@
 clear ; close all; clc
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
-data_test = load('test_data.txt');
+data_test = load('../test_data.txt');
 X_test = data_test(:, [1:7]); y_test = data_test(:, 11);
 
 X_HTR = data_test(:, 8);
@@ -22,7 +22,7 @@ fprintf('\nNaive predict Accuracy: %f\n', mean(double(naive_pred == y_test)) * 1
 
 
 %%%%%%%%%% load theta from file
-load('theta.mat');
+load('../config/theta.mat');
 
 
 %%%%%%%%%% predict with Theta1 and Theta2
