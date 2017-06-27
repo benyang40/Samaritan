@@ -3,7 +3,7 @@ clear ; close all; clc
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
 data_test = load('../test_data.txt');
-X_test = data_test(:, [1:7]); y_test = data_test(:, 11);
+X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
 
 X_HTR = data_test(:, 8);
 naive_pred = zeros(size(X_HTR, 1), 1);

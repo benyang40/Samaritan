@@ -8,7 +8,7 @@ clear ; close all; clc
 max_iter = 1000;
 
 data = load('../training_data.txt');
-X = data(:, [1:7]); y = data(:, 11);
+X = data(:, [1:8]); y = data(:, 12);
 
 fprintf(['Plotting data...\n']);
 
@@ -27,12 +27,12 @@ hold off;
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-%{
+
 %%%%% finding correct lambda  %%%%%%%%%%%%%%%%%%%%%
 
 % load validation data
 data_val = load('../validation_data.txt');
-X_val = data_val(:, [1:7]); y_val = data_val(:, 11);
+X_val = data_val(:, [1:8]); y_val = data_val(:, 12);
 
 [lambda_vec, error_train, error_val] = ...
     validationCurve(X, y, X_val, y_val);
@@ -52,15 +52,15 @@ end
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-%}
+%{
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
 data_test = load('../test_data.txt');
-X_test = data_test(:, [1:7]); y_test = data_test(:, 11);
+X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
 
 %%%%%%%%%% train with lambda
-lambda_test = 1;
-[Theta1, Theta2] = train(X_test, y_test, lambda_test, max_iter);
+lambda = 1;
+[Theta1, Theta2] = train(X, y, lambda, max_iter);
 
 
 %%%%%%%%%% predict with Theta1 and Theta2
@@ -70,5 +70,5 @@ lambda_test = 1;
 fprintf('\nOverall Test Set Accuracy: %f\n', mean(double(pred == y_test)) * 100);
 
 
-
+%}
 

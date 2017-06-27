@@ -41,7 +41,7 @@ error_val = zeros(length(lambda_vec), 1);
 %
 
 %% Setup the parameters you will use for this exercise
-input_layer_size  = 7;    % HTHC    HTAC    B365H   B365D   B365A   HTHG    HTAG
+input_layer_size  = 8;    % League HTHC    HTAC    B365H   B365D   B365A   HTHG    HTAG
 hidden_layer_size = 3;    % 3 hidden units
 num_labels = 3;           % 3 labels, 2: Home win, 1: Draw, 0: Away win 
 
