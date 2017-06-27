@@ -27,6 +27,7 @@ hold off;
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
+%{
 
 %%%%% finding correct lambda  %%%%%%%%%%%%%%%%%%%%%
 
@@ -52,14 +53,14 @@ end
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
-%{
+%}
 
 %%%%% test data %%%%%%%%%%%%%%%%%%%%%
 data_test = load('../test_data.txt');
 X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
 
 %%%%%%%%%% train with lambda
-lambda = 1;
+lambda = 0;
 [Theta1, Theta2] = train(X, y, lambda, max_iter);
 
 
@@ -70,5 +71,5 @@ lambda = 1;
 fprintf('\nOverall Test Set Accuracy: %f\n', mean(double(pred == y_test)) * 100);
 
 
-%}
+
 
