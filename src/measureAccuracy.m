@@ -5,7 +5,7 @@ clear ; close all; clc
 data_test = load('../test_data.txt');
 X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
 
-X_HTR = data_test(:, 8);
+X_HTR = data_test(:, 9);
 naive_pred = zeros(size(X_HTR, 1), 1);
 
 for xi = 1:rows(X_HTR)
