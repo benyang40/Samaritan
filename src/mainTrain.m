@@ -27,8 +27,8 @@ hold off;
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-%{
 
+%{
 %%%%% finding correct lambda  %%%%%%%%%%%%%%%%%%%%%
 
 % load validation data
@@ -55,14 +55,14 @@ pause;
 
 %}
 
-%%%%% test data %%%%%%%%%%%%%%%%%%%%%
-data_test = load('../test_data.txt');
-X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
-
 %%%%%%%%%% train with lambda
 lambda = 0;
 [Theta1, Theta2] = train(X, y, lambda, max_iter);
 
+
+%%%%% test data %%%%%%%%%%%%%%%%%%%%%
+data_test = load('../test_data.txt');
+X_test = data_test(:, [1:8]); y_test = data_test(:, 12);
 
 %%%%%%%%%% predict with Theta1 and Theta2
 [h, h2, pred] = predict(Theta1, Theta2, X_test);
