@@ -27,7 +27,6 @@ hold off;
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
 
-
 %{
 %%%%% finding correct lambda  %%%%%%%%%%%%%%%%%%%%%
 
@@ -56,7 +55,7 @@ pause;
 %}
 
 %%%%%%%%%% train with lambda
-lambda = 0;
+lambda = 0.01;
 [Theta1, Theta2] = train(X, y, lambda, max_iter);
 
 
